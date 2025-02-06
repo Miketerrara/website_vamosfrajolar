@@ -1,0 +1,22 @@
+@use 'variable.scss' as c;
+@use 'flexbox.scss' as flex;
+@use 'header.scss' as header;
+
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+body{
+    position:relative;
+    font-family: c.$ff;
+    width:100%;
+    margin:0 auto;
+    background: c.$bg;
+}
+ul{
+    display:flex;
+}
+a{
+    color:#ffffff;
+    text-decoration:none;
+}
