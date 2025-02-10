@@ -5,11 +5,15 @@
   align-items: center;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .menu {
   position: absolute;
   top: 4rem;
   width: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
   box-sizing: border-box;
   background-color: #0B8558;
   height: 12rem;
@@ -19,22 +23,27 @@
 .menu .logo {
   margin: -4rem 2rem 0;
 }
-.menu .bar .bar-01,
-.menu .bar .bar-02,
-.menu .bar .bar-03 {
+.menu .nav-hidden {
+  display: block;
+}
+.menu .nav-hidden .bar .bar-01,
+.menu .nav-hidden .bar .bar-02,
+.menu .nav-hidden .bar .bar-03 {
   width: 40px;
   height: 6px;
-  background: #fff;
+  background: #f5f7fa;
   margin-top: 0.4rem;
   border-radius: 1rem;
 }
-
-button {
-  background: transparent;
-  border: none;
-  outline: transparent;
-  font: 400 1.2rem "Coiny", serif;
-  cursor: pointer;
+@media screen and (min-width: 767px) {
+  .menu {
+    padding: 2rem 5.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu .nav-hidden {
+    display: none;
+  }
 }
 
 .bar-modal {
@@ -47,7 +56,6 @@ button {
   width: 100%;
   transition: All 0.4s ease-in-out;
 }
-
 .bar-modal--active {
   position: absolute;
   top: 0;
@@ -59,8 +67,7 @@ button {
   z-index: 99;
   opacity: 0.95;
 }
-
-.nav-modal {
+.bar-modal__nav {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -75,67 +82,85 @@ button {
   flex-direction: column;
 }
 
-.nav-modal ul li:hover {
-  font-weight: 800;
-  letter-spacing: 0.8px;
-}
-
-.nav__links {
-  width: 100%;
-}
-
-.links {
+.hidden {
   display: none;
 }
 
-.nav-hidden {
-  display: block;
-}
-
 @media screen and (min-width: 1024px) {
-  .bar {
-    display: none;
-  }
   .nav__button {
     display: none;
   }
-  .links {
+  .hidden {
     display: flex;
   }
-  .links + .links li {
+  .hidden + .hidden li {
     border: 1px solid #f5f7fa;
     padding: 1rem 1.6rem;
     border-radius: 0.8rem;
   }
-  .links li i {
+  .hidden li i {
     margin-right: 1rem;
     font-size: 1.4rem;
     vertical-align: middle;
   }
-  .nav__links {
-    display: flex;
-    flex: 1 1 360px;
-  }
-  ul {
-    margin: 0 2rem;
-  }
-  ul li {
-    margin: 0 2rem;
-    font: 400 1.4rem var(--sf);
-    letter-spacing: 0.8px;
-    transition: var(--transition-normal);
-  }
-  .links li:hover {
-    font-weight: 800;
-    letter-spacing: 1px;
-  }
-  .nav-hidden {
-    display: none;
-  }
-  .bar {
-    display: none;
-  }
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -154,6 +179,8 @@ ul {
 }
 
 a {
-  color: #ffffff;
+  color: #f5f7fa;
   text-decoration: none;
 }
+
+/*# sourceMappingURL=style.css.map */

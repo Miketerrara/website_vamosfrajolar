@@ -1,6 +1,7 @@
 @use 'variable.scss' as c;
 @use 'flexbox.scss' as flex;
 @use 'header.scss' as header;
+@use 'reset.scss';
 
 html{
     font-size: 62.5%;
@@ -17,6 +18,6 @@ ul{
     display:flex;
 }
 a{
-    color:#ffffff;
+    color:c.$bg;
     text-decoration:none;
 }
