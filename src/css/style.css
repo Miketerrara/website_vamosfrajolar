@@ -1,3 +1,52 @@
+@import "tailwindcss";
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#hero {
+  background-color: #E7F7ED;
+  height: 76rem;
+}
+#hero .hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -5,43 +54,85 @@
   align-items: center;
 }
 
-.w100 {
-  width: 100%;
+.flex-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flex-c {
+  display: flex;
+  justify-content: center;
 }
 
 .menu {
   position: absolute;
   top: 4rem;
+  left: 50%;
+  transform: translate(-50%);
   width: 100%;
-  padding: 2rem;
+  max-width: 1280px;
+  padding: 0 2rem;
   box-sizing: border-box;
   background-color: #0B8558;
   height: 12rem;
   border-radius: 2rem;
   z-index: 3;
 }
+.menu button {
+  background: transparent;
+  border: none;
+  outline: transparent;
+  font: 400 1.2rem "Nunito", serif;
+  cursor: pointer;
+}
+.menu .hidden-flex--reverse {
+  display: none;
+}
+.menu .hidden {
+  display: block;
+}
 .menu .logo {
   margin: -4rem 2rem 0;
 }
-.menu .nav-hidden {
-  display: block;
-}
-.menu .nav-hidden .bar .bar-01,
-.menu .nav-hidden .bar .bar-02,
-.menu .nav-hidden .bar .bar-03 {
+.menu .bar .bar-01,
+.menu .bar .bar-02,
+.menu .bar .bar-03 {
   width: 40px;
   height: 6px;
-  background: #f5f7fa;
+  background: #fff;
   margin-top: 0.4rem;
   border-radius: 1rem;
 }
-@media screen and (min-width: 767px) {
-  .menu {
-    padding: 2rem 5.2rem;
-  }
-}
 @media screen and (min-width: 1024px) {
-  .menu .nav-hidden {
+  .menu {
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+  }
+  .menu .hidden-flex {
+    display: flex;
+  }
+  .menu .hidden-flex li {
+    margin: 0 2rem;
+    margin: 0 2.8rem;
+  }
+  .menu .hidden-flex--unique li {
+    padding: 0.8rem 2rem;
+    border-radius: 0.8rem;
+    margin: 0 2.8rem;
+    border: 1px solid #f5f7fa;
+  }
+  .menu .hidden-flex--unique li i {
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+  .menu a {
+    transition: all 0.45s ease-in;
+  }
+  .menu a:hover {
+    font-weight: 800;
+  }
+  .menu .hidden {
     display: none;
   }
 }
@@ -67,98 +158,21 @@
   z-index: 99;
   opacity: 0.95;
 }
-.bar-modal__nav {
+.bar-modal--active__nav {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font: 400 2.4rem/2.5 "Nunito", serif;
+  font: 400 2.4rem/2.5 "Coiny", serif;
+}
+.bar-modal--active__nav ul li:hover {
+  font-weight: 800;
+  letter-spacing: 0.8px;
 }
 
-.nav-modal ul {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.hidden {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  .nav__button {
-    display: none;
-  }
-  .hidden {
-    display: flex;
-  }
-  .hidden + .hidden li {
-    border: 1px solid #f5f7fa;
-    padding: 1rem 1.6rem;
-    border-radius: 0.8rem;
-  }
-  .hidden li i {
-    margin-right: 1rem;
-    font-size: 1.4rem;
-    vertical-align: middle;
-  }
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-button {
-  background: transparent;
-  border: none;
-  outline: transparent;
-  cursor: pointer;
+.w-100 {
+  width: 100%;
 }
 
 html {
@@ -168,19 +182,21 @@ html {
 
 body {
   position: relative;
-  font-family: "Coiny", serif;
+  font-family: "Nunito", serif;
   width: 100%;
   margin: 0 auto;
   background: #f5f7fa;
 }
 
-ul {
-  display: flex;
-}
-
 a {
   color: #f5f7fa;
   text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

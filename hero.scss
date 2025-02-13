@@ -1,0 +1,15 @@
+@use 'variable.scss' as c;
+
+#hero{
+    background-color:c.$green-light;
+    height:76rem;
+    .hero{
+        display:block;
+        position:relative;
+        width:100%;
+        max-width:1280px;
+        margin:0 auto;
+
+
+    }
+}

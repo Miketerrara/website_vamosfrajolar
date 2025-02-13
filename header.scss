@@ -3,37 +3,75 @@
 .menu{
     position:absolute;
     top:4rem;
+    left:50%;
+    transform:translate(-50%);
     width:100%;
-    padding: 2rem;
+    max-width:1280px;
+    padding: 0 2rem;
     box-sizing:border-box;
     background-color: c.$green;
     height: 12rem;
     border-radius: 2rem;
     z-index:3;
-    .logo{
-    margin:-4rem 2rem 0;  
+    button {
+        background: transparent;
+        border: none;
+        outline: transparent;
+        font: 400 1.2rem c.$ff;
+        cursor: pointer;
     }
-    .nav-hidden{
+    .hidden-flex--reverse{
+        display:none;
+    }
+    .hidden{
         display:block;
-        .bar {
-            .bar-01,
-            .bar-02,
-            .bar-03 {
-                width: 40px;
-                height: 6px;
-                background: c.$bg;
-                margin-top: .4rem;
-                border-radius: 1rem;
+    }
+    .logo{
+        margin:-4rem 2rem 0;
+    }
+    .bar {
+        .bar-01,
+        .bar-02,
+        .bar-03 {
+            width: 40px;
+            height: 6px;
+            background: #fff;
+            margin-top: .4rem;
+            border-radius: 1rem;
+        }
+    }
+    @media screen and (min-width:1024px) {
+        font-size:1.4rem;
+        letter-spacing: .8px;
+        .hidden-flex{
+            display:flex;
+            
+            li{
+                margin: 0 2rem;
+                margin:0 2.8rem;
+                
+                
+            }
+            &--unique{
+                li{
+                    padding:.8rem 2rem;
+                    border-radius:.8rem;
+                    margin:0 2.8rem;
+                    border:1px solid c.$bg;
+                    i{
+                        margin-right:1rem;
+                        vertical-align: middle;
+                    }
+                }
             }
         }
-    }
-    @media screen and (min-width: 767px) {
-        &{
-            padding: 2rem 5.2rem;
+        a{
+            transition: c.$transition;
+            &:hover{
+                font-weight:800;
+            }
         }
-    }
-    @media screen and (min-width: 1024px) {
-        .nav-hidden {
+        .hidden {
             display: none;
         }
     }
@@ -47,7 +85,7 @@
     right: 0px;
     width: 100%;
     transition: All .4s ease-in-out;
-    &--active {
+    &--active{
         position: absolute;
         top: 0;
         right: 0;
@@ -57,45 +95,25 @@
         height: 100%;
         z-index: 99;
         opacity: .95;
-    }
-    &__nav {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font: 400 2.4rem/2.5 c.$sf;
-    }
-}
-
-
-
-
-.nav-modal ul {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.hidden{
-    display:none;
-}
-
-@media screen and (min-width:1024px) {
-
-    .nav__button{
-        display:none;
-    }
-    .hidden{
-        display:flex;
-    }
-    .hidden + .hidden li{
-        border: 1px solid c.$bg;
-        padding:1rem 1.6rem;
-        border-radius: .8rem;
-    }
-    .hidden li i{
-        margin-right:1rem;
-        font-size: 1.4rem;
-        vertical-align: middle;
+        &__nav{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font: 400 2.4rem/2.5 c.$sf;
+        }
+        &__nav ul li:hover {
+            font-weight: 800;
+            letter-spacing: .8px;
+        }
     }
 }
+
+
+
+
+.w-100{
+    width: 100%;
+}
+

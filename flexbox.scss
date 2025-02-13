@@ -4,6 +4,12 @@
     flex-wrap:nowrap;
     align-items: center;
 }
-.w100{
-    width:100%;
+.flex-column{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.flex-c{
+    display:flex;
+    justify-content:center;
 }

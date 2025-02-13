@@ -1,7 +1,8 @@
 @use 'variable.scss' as c;
+@use 'reset.scss';
+@use 'hero.scss';
 @use 'flexbox.scss' as flex;
 @use 'header.scss' as header;
-@use 'reset.scss';
 
 html{
     font-size: 62.5%;
@@ -14,10 +15,12 @@ body{
     margin:0 auto;
     background: c.$bg;
 }
-ul{
-    display:flex;
-}
 a{
     color:c.$bg;
     text-decoration:none;
+}
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
 }
