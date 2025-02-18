@@ -7,14 +7,14 @@
     <meta name="author" content="Associação Vamos Frajolar">
     <meta name="robot" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="_assets/favicon-frajolar.png" size="16px" type="image/png">
+    <link rel="icon" href="./src/assets/Vamos-Frajolar_LOGO 2.png" size="16px" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="../../node_modules/@flaticon/flaticon-uicons/css/all/all.css">
+    <link rel="stylesheet" href="./node_modules/@flaticon/flaticon-uicons/css/all/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -57,19 +57,19 @@
     <div class="bar-modal">
         <div class="bar-modal__nav">
             <ul class="hidden flex-column">
-                <a href="about.html">
+                <a href="./src/html/about.html">
                     <li>Sobre nós</li>
                 </a>
-                <a href="adote.html">
+                <a href="./src/html/adote.html">
                     <li>Quero Adotar</li>
                 </a>
-                <a href="how.html">
+                <a href="./src/html/how.html">
                     <li>Como ajudar </li>
                 </a>
-                <a href="how-adote.html">
+                <a href="./src/html/how-adote.html">
                     <li><i class="fi fi-rr-playing-cards"></i>Como adotar</li>
                 </a>
-                <a href="contact.html">
+                <a href="./src/html/contact.html">
                     <li>Contato</li>
                 </a>
             </ul>
@@ -79,10 +79,11 @@
         <section id="hero">
             <div class="hero">
                 <div class="hero__title">
-                    <h1 class="text-bold">Encontre o seu novo melho amigo</h1>
+                    <h1 class="text-bold">Encontre o seu novo melhor amigo</h1>
                     <p>Dê um lar, ganhe um amigo fiel para toda a vida</p>
-                    <a href="adocao.html"><button type="button"><i class="fi fi-rr-paw"></i>Procurar um amigo!</button></a>
+                    <a href="./src/html/adote.html"><button type="button"><i class="fi fi-rr-paw"></i>Procurar um amigo!</button></a>
                 </div>
+                <img src="./src/assets/Bn_Gato01.png" alt="Gato zoiudo">
             </div>
         </section>
         <section>
@@ -92,6 +93,7 @@
                     <div class="grid-r-1/2">
                         <div class="grid">
                             <h3>Apadrinhamento</h3>
+                            <img src="./src/assets/foto-apadrinhamento_01.jpg" alt="">
                         </div>
                         <div class="grid-1/2">
                             <div class="grid">
@@ -104,6 +106,7 @@
                     </div>
                     <div class="grid">
                         <h3>Projeto jojolândia</h3>
+                        <img src="./src/assets/projeto-jojolandia.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -111,7 +114,7 @@
         <section>
             <div class="container">
                 <div class="img-about">
-                    <img src="" alt="">
+                    <img src="./src/assets/frajola-mingatos.png" alt="">
                 </div>
                 <div class="about-dsc">
                     <h2 class="title">Sobre o Frajolar</h2>
@@ -127,9 +130,8 @@
             <div class="container">
                 <h2 class="title">Por que adotar?</h2>
                 <div class="flex-wrap">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="./src/assets/why-adote_01.jpg" alt="Você está salvando uma vida! Os gatos que estão em abrigos de animais e programas de resgate encontram-se nessa situação devido a algum contratempo em suas vidas, necessitando de um novo lar.">
+                    <img src="./src/assets/why-adote_02.jpg" alt="Eles vão estar te ajudando sempre! Eles podem ajudar a aliviar a depressão, a solidão e diminuir o risco de ataques cardíacos e derrames.">
                 </div>
             </div>
         </section>
@@ -139,7 +141,14 @@
             </div>
             <div class="grid">
                 <div class="grid-2/3">
-                    <div class="grid-fotos"></div>
+                    <div class="grid-fotos">
+                        <div>
+                            <img id="myImage" src="./src/assets/timao-photo_01.jpg" alt="" class="foto-gato">
+                        </div>
+                        <div>
+                            <img id="otherPhotos" src="./src/assets/timao-photo_02.jpg" alt="">
+                        </div>
+                    </div>
                     <div class="grid-dsc-fotos">
                         <span>Escolha seu amigo</span>
                         <h2 class="title">Timão</h2>
