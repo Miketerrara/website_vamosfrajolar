@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Organização sem fins lucrativos que cuida de gatos resgatados da rua. Conta com mais de 70 gatos atualmente para alimentar.">
@@ -25,23 +25,23 @@
 <body>
     <header class="menu flex">
         <nav class="w-100 flex">
-            <a href="index.html" class="logo"><img src="../assets/Vamos-Frajolar_LOGO 2.png" alt="Mascote frajola, com cocar de índio na cabeça"></a>
+            <a href="index.html" class="logo"><img src="./src/assets/Vamos-Frajolar_LOGO 2.png" alt="Mascote frajola, com cocar de índio na cabeça"></a>
             <ul class="hidden-flex flex">
-                <a href="about.html">
+                <a href="./src/html/about.html">
                     <li>Sobre nós</li>
                 </a>
-                <a href="adote.html">
+                <a href="./src/html/adote.html">
                     <li>Quero Adotar</li>
                 </a>
-                <a href="how.html">
+                <a href="./src/html/how.html">
                     <li>Como ajudar </li>
                 </a>
             </ul>
             <ul class="hidden-flex--unique flex">
-                <a href="how-adote.html">
-                    <li><i class="fi fi-rr-playing-cards"></i>Como adotar</li>
+                <a href="./src/html/how-adote.html">
+                    <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
                 </a>
-                <a href="contact.html">
+                <a href="./src/html/contact.html">
                     <li>Contato</li>
                 </a>
             </ul>
@@ -67,7 +67,7 @@
                     <li>Como ajudar </li>
                 </a>
                 <a href="./src/html/how-adote.html">
-                    <li><i class="fi fi-rr-playing-cards"></i>Como adotar</li>
+                    <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
                 </a>
                 <a href="./src/html/contact.html">
                     <li>Contato</li>
@@ -150,8 +150,16 @@
                         </div>
                     </div>
                     <div class="grid-dsc-fotos">
-                        <span>Escolha seu amigo</span>
-                        <h2 class="title">Timão</h2>
+                        <div class="grid-dsc-fotos_header">
+                            <div class="grid-dsc-fotos_header-title">
+                                <span>Escolha seu amigo</span>
+                                <h2 class="title">Timão</h2>
+                            </div>
+                            <div class="grid-dsc-fotos_header-tags">
+                                <i class="fi fi-sr-wishlist-star"></i>
+                                <i class="fi fi-rr-mars"></i>
+                            </div>                            
+                        </div>                        
                         <p class="txt-corpo">
                             Foi abandonada com seus irmãos e mãe, toda a sua família já foi adotada. Um dia antes do seu resgate foi atacado por um cachorro, quebrou seu fêmur em dois lugares , mas hoje ele está bem e recuperado. Gosta de focar perto. Ama carinho, mas não gosta de colocar. Cuidado com o seu pai, ele vai fazer de tudo para pega-lo.
                         </p>
@@ -162,16 +170,28 @@
                         <div class="grid-dsc-foto__buttons">
                             <button class="grid-dsc-foto__button--adote">Adotar</button>
                             <button class="grid-dsc-foto__button--apadrinhe">Apadrinhar</button>
-                        
+                            
                         </div>
                     </div>
                 </div>
                 <div class="grid-1/3">
-                    <div class="block-itens"></div>
-                    <div class="block-itens"></div>
-                    <div class="block-itens"></div>
-                    <div class="block-itens"></div>
-                    <div class="block-itens"></div>
+                    <i class="fi fi-bs-angle-small-up"></i>
+                    <div class="block-images">
+                        <img src="./src/assets/Rectangle 75.jpg" alt="Theo">
+                        <h3 class="name-cats">Theo</h3>
+                        <i class="fi fi-rr-mars"></i>
+                    </div>
+                    <div class="block-images">
+                        <img src="./src/assets/Rectangle 75(1).jpg" alt="Paçoca">
+                        <h3 class="name-cats">Paçoca</h3>
+                        <i class="fi fi-rr-mars"></i>
+                    </div>
+                    <div class="block-images">
+                        <img src="./src/assets/Rectangle 75(2).jpg" alt="Michael">
+                        <h3 class="name-cats">Michael</h3>
+                        <i class="fi fi-rr-mars"></i>
+                    </div>
+                    <i class="fi fi-bs-angle-small-down"></i>
                 </div>
             </div>
         </section>
@@ -180,64 +200,54 @@
                 <h2 class="title">Apadrinhamento</h2>
                 <p class="txt-corpo">Por que se Tornar um Padrinho?
                     Apadrinhar um animal da Frajolar é muito mais do que doar – é criar um laço especial com um peludo que precisa de cuidado e carinho. Como padrinho, você:</p>
-            </div>
-            <div class="padrinhos flex">
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
                 </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
+                <div class="padrinhos flex">
+                    <div class="padrinhos__card">
+                        <img src="./src/assets/transforme.jpg" alt="">
+                        <h4 class="padrinhos__title">Transforme vidas:</h4>
+                        <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
+                    </div>
+                    <div class="padrinhos__card">                        
+                        <img src="./src/assets/acompanhe.jpg" alt="Transforme vidas">
+                        <h4 class="padrinhos__title">Acompanhe de perto:</h4>
+                        <p class="txt-corpo">Receba fotos, vídeos e relatos exclusivos sobre a rotina do animal.</p>
+                    </div>
+                    <div class="padrinhos__card">
+                        <img src="./src/assets/visite.jpg" alt="">
+                        <h4 class="padrinhos__title">Visite o afilhado:</h4>
+                        <p class="txt-corpo">Venha criar memórias especiais na nossa ONG.</p>
+                    </div>
+                    <div class="padrinhos__card">
+                        <img src="./src/assets/mudanca.jpg" alt="">
+                        <h4 class="padrinhos__title">Faça parte da mudança:</h4>
+                        <p class="txt-corpo">Junte-se a uma comunidade que luta por um futuro digno para os resgatados.</p>
+                    </div>
+                    <div class="padrinhos__card">
+                        <img src="./src/assets/contribua.jpg" alt="">
+                        <h4 class="padrinhos__title">Contribua no seu ritmo:</h4>
+                        <p class="txt-corpo">Escolha o valor e a forma de contribuição que melhor se adaptam a você.</p>
+                    </div>
                 </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
+            </section>
+        </main>
+        <footer>
+            <div class="container flex">
+                <div class="footer__infos">
+                    <i class="fi fi-sc-envelope"></i>
+                    <p class="txt-corpo">info@vamosfrajolar.org</p>
+                    <i class="fi fi-sr-marker"></i>
+                    <p class="txt-corpo">Rua Praia Pontal da Cruz, 55,
+                        Sertão do Camburi - São Sebastião - SP</p>
+                    </div>
+                    <div class="footer__infos">
+                        <p class="txt-corpo">CNPJ: 46.425.624/0001-51</p>
+                    </div>
+                    <div class="footer__infos">
+                        <i class="fi fi-brands-instagram"></i>
+                        <i class="fi fi-brands-facebook"></i>
+                        <i class="fi fi-brands-whatsapp"></i>
+                    </div>
                 </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
-                </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
-                </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
-                </div>
-                <div class="padrinhos__card">
-                    <img src="" alt="">
-                    <h4 class="padrinhos__title">Transforme vidas:</h4>
-                    <p class="txt-corpo">Sua contribuição garante cuidados essenciais e conforto ao seu afilhado.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container flex">
-            <div class="footer__infos">
-                <i class="fi fi-sc-envelope"></i>
-                <p class="txt-corpo">info@vamosfrajolar.org</p>
-                <i class="fi fi-sr-marker"></i>
-                <p class="txt-corpo">Rua Praia Pontal da Cruz, 55,
-                    Sertão do Camburi - São Sebastião - SP</p>
-            </div>
-            <div class="footer__infos">
-                <p class="txt-corpo">CNPJ: 46.425.624/0001-51</p>
-            </div>
-            <div class="footer__infos">
-                <i class="fi fi-brands-instagram"></i>
-                <i class="fi fi-brands-facebook"></i>
-                <i class="fi fi-brands-whatsapp"></i>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+            </footer>
+        </body>
+        </html>
