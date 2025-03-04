@@ -1,5 +1,16 @@
 @use 'variable.scss' as c;
 
+@mixin btn($btn:c.$yellow) {
+    background-color:$btn;
+    color:c.$bg;
+    padding:1.2rem 1.6rem;
+    outline:none;
+    border:none;
+    border-radius:.4rem;
+    margin-top:2rem;
+    font: c.$ff-txt;
+}
+
 #hero{
     background-color:c.$green-light;
     height:76rem;
@@ -25,6 +36,15 @@
         img{
             margin-top:8rem;
             margin-right:11rem;
+        }
+        button{
+            @include btn;
+            width:22rem;
+            .fi{
+                margin:0 .8rem;
+                font-size:1.8rem;
+                vertical-align: middle;
+            }
         }
 
     }

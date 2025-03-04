@@ -61,6 +61,22 @@ table {
   margin-top: 8rem;
   margin-right: 11rem;
 }
+#hero .hero button {
+  background-color: #F2B11C;
+  color: #f5f7fa;
+  padding: 1.2rem 1.6rem;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  font: 400 1.6rem/2.4rem "Nunito", serif;
+  width: 22rem;
+}
+#hero .hero button .fi {
+  margin: 0 0.8rem;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
 
 .text-bold {
   font: 900 8rem/7.6rem "Coiny", serif;
@@ -208,6 +224,11 @@ table {
   width: 100%;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -232,8 +253,17 @@ a {
   margin: 0 auto;
 }
 
+.title {
+  font: 800 4rem "Coiny", serif;
+  color: #0B8558;
+  text-align: center;
+  margin: 5rem 0 2rem;
+}
+
 .txt-corpo {
   font: 400 1.6rem/2.4rem "Nunito", serif;
+  text-align: center;
+  color: #383d38;
 }
 
 /*# sourceMappingURL=style.css.map */

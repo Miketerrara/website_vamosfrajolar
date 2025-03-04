@@ -1,0 +1,53 @@
+@use 'variable.scss' as c;
+@use 'reset.scss';
+@use 'hero.scss';
+@use 'flexbox.scss';
+@use 'header.scss';
+@use 'grid.scss';
+
+@mixin btn($btn:c.$yellow) {
+    background-color:$btn;
+    color:c.$bg;
+    padding:.8rem .8rem;
+}
+
+@mixin title($title:c.$green, $align:center) {
+    font:c.$ff-h1;
+    color: $title;
+    text-align: $align;
+    margin:5rem 0 2rem;
+}
+@mixin txt($color-txt:c.$black, $align:center){
+    font:c.$ff-txt;
+    text-align: $align;
+    color:$color-txt;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+body{
+    position:relative;
+    font-family: c.$ff;
+    width:100%;
+    margin:0 auto;
+    background: c.$bg;
+}
+a{
+    color:c.$bg;
+    text-decoration:none;
+}
+.container{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+}
+.title{
+    @include title;
+}
+.txt-corpo{
+    @include txt;
+}
+
+
+ 
