@@ -2,15 +2,15 @@
 
 .menu{
     position:absolute;
-    top:4rem;
+    top:7.2rem;
     left:50%;
     transform:translate(-50%);
     width:100%;
-    max-width:1280px;
+    max-width:1170px;
     padding: 0 2rem;
     box-sizing:border-box;
     background-color: c.$green;
-    height: 12rem;
+    height: 9rem;
     border-radius: 2rem;
     z-index:3;
     button {
@@ -30,6 +30,7 @@
         margin:-4rem 2rem 0;
     }
     .bar {
+        margin:0 1rem;
         .bar-01,
         .bar-02,
         .bar-03 {
@@ -43,15 +44,8 @@
     @media screen and (min-width:1024px) {
         font-size:1.4rem;
         letter-spacing: .8px;
-        .hidden-flex{
-            display:flex;
-            
-            li{
-                margin: 0 2rem;
-                margin:0 2.8rem;
-                
-                
-            }
+        .hidden-flex--reverse{
+            display:flex;        
             &--unique{
                 li{
                     padding:.8rem 2rem;
@@ -66,6 +60,8 @@
             }
         }
         a{
+            margin:0 3.1rem;
+            font-size:1.5rem;
             transition: c.$transition;
             &:hover{
                 font-weight:800;
@@ -109,9 +105,16 @@
         }
     }
 }
-
-
-
+.box-link1, .box-link2{
+    border: 1px solid c.$bg;
+    border-radius:.6rem;
+    font-size:1.4rem;
+    height:1.4rem;
+    padding: .8rem 1.2rem;
+}
+.box-link1{
+    padding:.8rem 3.2rem;
+}
 
 .w-100{
     width: 100%;

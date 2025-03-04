@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -39,12 +37,34 @@ table {
   background-color: #E7F7ED;
   height: 76rem;
 }
+#hero .txt-corpo {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
 #hero .hero {
   display: block;
   position: relative;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+#hero .hero__title {
+  position: absolute;
+  top: 37%;
+  left: 10rem;
+  margin: 0 2rem;
+  width: 45%;
+}
+#hero .hero img {
+  margin-top: 8rem;
+  margin-right: 11rem;
+}
+
+.text-bold {
+  font: 900 8rem/7.6rem "Coiny", serif;
+  color: #0B8558;
 }
 
 .flex {
@@ -67,15 +87,15 @@ table {
 
 .menu {
   position: absolute;
-  top: 4rem;
+  top: 7.2rem;
   left: 50%;
   transform: translate(-50%);
   width: 100%;
-  max-width: 1280px;
+  max-width: 1170px;
   padding: 0 2rem;
   box-sizing: border-box;
   background-color: #0B8558;
-  height: 12rem;
+  height: 9rem;
   border-radius: 2rem;
   z-index: 3;
 }
@@ -95,6 +115,9 @@ table {
 .menu .logo {
   margin: -4rem 2rem 0;
 }
+.menu .bar {
+  margin: 0 1rem;
+}
 .menu .bar .bar-01,
 .menu .bar .bar-02,
 .menu .bar .bar-03 {
@@ -109,24 +132,22 @@ table {
     font-size: 1.4rem;
     letter-spacing: 0.8px;
   }
-  .menu .hidden-flex {
+  .menu .hidden-flex--reverse {
     display: flex;
   }
-  .menu .hidden-flex li {
-    margin: 0 2rem;
-    margin: 0 2.8rem;
-  }
-  .menu .hidden-flex--unique li {
+  .menu .hidden-flex--reverse--unique li {
     padding: 0.8rem 2rem;
     border-radius: 0.8rem;
     margin: 0 2.8rem;
     border: 1px solid #f5f7fa;
   }
-  .menu .hidden-flex--unique li i {
+  .menu .hidden-flex--reverse--unique li i {
     margin-right: 1rem;
     vertical-align: middle;
   }
   .menu a {
+    margin: 0 3.1rem;
+    font-size: 1.5rem;
     transition: all 0.45s ease-in;
   }
   .menu a:hover {
@@ -171,6 +192,18 @@ table {
   letter-spacing: 0.8px;
 }
 
+.box-link1, .box-link2 {
+  border: 1px solid #f5f7fa;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  height: 1.4rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.box-link1 {
+  padding: 0.8rem 3.2rem;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -197,6 +230,10 @@ a {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.txt-corpo {
+  font: 400 1.6rem/2.4rem "Nunito", serif;
 }
 
 /*# sourceMappingURL=style.css.map */

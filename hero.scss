@@ -3,13 +3,34 @@
 #hero{
     background-color:c.$green-light;
     height:76rem;
+    .txt-corpo{
+        margin-top:2rem;
+        font-size:2rem;
+    }
     .hero{
         display:block;
         position:relative;
         width:100%;
         max-width:1280px;
         margin:0 auto;
-
+        display:flex;        
+        justify-content: flex-end;
+        &__title{
+            position:absolute;
+            top:37%;
+            left:10rem;
+            margin:0 2rem;
+            width:45%;
+        }
+        img{
+            margin-top:8rem;
+            margin-right:11rem;
+        }
 
     }
+}
+.text-bold{
+    font:c.$ff-hero;
+    color: c.$green;
+
 }
