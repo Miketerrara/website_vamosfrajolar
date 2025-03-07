@@ -10,13 +10,17 @@
     margin-top:2rem;
     font: c.$ff-txt;
 }
+@mixin txt($color-txt:c.$black, $align:center){
+    font:c.$ff-txt;
+    text-align: $align;
+    color:$color-txt;
+}
 
 #hero{
     background-color:c.$green-light;
     height:76rem;
     .txt-corpo{
-        margin-top:2rem;
-        font-size:2rem;
+        @include txt($align:left);
     }
     .hero{
         display:block;

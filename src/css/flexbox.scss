@@ -1,15 +1,21 @@
-.flex{
+
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
     display:flex;
-    justify-content:space-between;
-    flex-wrap:nowrap;
-    align-items: center;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
 }
+.flex{
+    @include flex;
+}
+
 .flex-column{
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
+    @include flex;
+    flex-direction:column;
 }
 .flex-c{
-    display:flex;
-    justify-content:center;
+    @include flex($justify: center);
+}
+.flex-stretch{
+    @include flex($justify:space-evenly);
 }

@@ -1,6 +1,62 @@
 @use 'variable.scss' as c;
 
-.grid-container{
+@mixin title-grid($gridFont:900 4rem/4rem c.$sf, $gridColor: c.$bg) {
+    color:$gridColor;
+    font:$gridFont;
+    margin:2rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+
+@mixin grid($qtdeColumn: 1fr 1fr, $gap:2rem){
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+}
+.grid-container{
+    @include grid;
+    img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        border-radius:2rem;
+    }
+    &__inside{
+        @include grid;
+        .grid-1{
+            grid-column: span 2;
+        }
+    }
+    .grid, .grid-1, .grid-2{
+        position:relative;
+        &::before{
+            content:"";
+            background: linear-gradient(to top, c.$green, rgba(11, 133, 88, 0));
+            opacity:0.8;
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;
+            border-radius:2rem;
+        }
+    }
+    .title-grid{
+        @include title-grid;
+
+    }
+}
+.choose-friend{
+    @include grid($qtdeColumn: 3fr 1fr);
+    &__principal{
+        grid-column:1;
+        @include grid($qtdeColumn: 1fr 2fr, $gap:2rem);        
+    }
+    &__fotos{
+        @include grid($qtdeColumn: 1fr 1fr 1fr, $gap:1rem);
+        #myImage{
+            grid-column: span 3;
+            width:100%;
+        }
+    }
 }

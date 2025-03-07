@@ -31,11 +31,46 @@ body{
     font-family: c.$ff;
     width:100%;
     margin:0 auto;
-    background: c.$bg;
+    background: c.$body;
 }
 a{
     color:c.$bg;
     text-decoration:none;
+    cursor:pointer;
+}
+section{
+    padding:4rem 0;
+}
+#about{
+    .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:start;
+    }
+    .img-about{
+        position:relative;
+        padding:2rem;
+        margin-right:2rem;
+        img{
+            z-index:1;
+        }
+    }
+    .title{
+        @include title($align:left);
+    }
+    .txt-corpo{
+        @include txt($align:left);
+    }
+    .underlay{            
+        position:absolute;
+        height:92%;
+        width:20rem;
+        background-color:c.$yellow;   
+        left:0;   
+        top:0;  
+        z-index:-1;
+        border-radius:.4rem;
+    }
 }
 .container{
     width:100%;

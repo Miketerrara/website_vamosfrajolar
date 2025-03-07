@@ -91,35 +91,37 @@
                 <h2 class="title">Nossos projetos</h2>
                 <div class="grid-container">
                     <div class="grid-container__inside">
-                        <div class="grid">
-                            <h3>Apadrinhamento</h3>
-                            <img src="./src/assets/foto-apadrinhamento_01.jpg" alt="">
-                        </div>
-                        <div class="grid-container__inside">
-                            <div class="grid">
-                                <h3>Como ajudar?</h3>
-                            </div>
-                            <div class="grid">
-                                <h3>CED?</h3>
-                            </div>
-                        </div>
+                        <a href="./src/html/how-adote.html" class="grid-1">
+                            <h3 class="title-grid">Apadrinhamento</h3>
+                            <img src="./src/assets/foto-apadrinhamento_01.jpg" alt="Apadrinhamento">
+                        </a>
+                        <a href="./src/html/how.html" class="grid-2">
+                            <h3 class="title-grid">Como ajudar?</h3>
+                            <img src="./src/assets/como-ajudar.jpg" alt="Como ajudar">
+                        </a>
+                        <a href="./src/html/about.html" class="grid-2">
+                            <h3 class="title-grid">CED?</h3>
+                            <img src="./src/assets/CED.jpg" alt="CED">
+                        </a>
                     </div>
-                    <div class="grid">
-                        <h3>Projeto jojolândia</h3>
+                    <a href="./src/html/about.html" class="grid">
+                        <h3 class="title-grid">Projeto jojolândia</h3>
                         <img src="./src/assets/projeto-jojolandia.jpg" alt="">
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="about">
             <div class="container">
                 <div class="img-about">
                     <img src="./src/assets/frajola-mingatos.png" alt="">
+                    <div class="underlay"></div>
                 </div>
-                <div class="about-dsc">
+                <div>
                     <h2 class="title">Sobre o Frajolar</h2>
                     <p class="txt-corpo">
                         No Frajolar, acreditamos que todo gato merece uma segunda chance e um lar repleto de amor. Nossa missão é resgatar, acolher e preparar esses pequenos para uma nova vida ao lado de pessoas que estão prontas para acolhê-los de braços abertos. Com uma equipe apaixonada por animais, nos dedicamos a cuidar, castrar, alimentar e socializar cada gatinho até que ele esteja pronto para ser adotado com segurança e carinho.
+                        <br>
                         <br>
                         Fundado com o propósito de transformar a vida dos gatos e das pessoas, o Frajolar já impactou centenas de lares, ajudando a criar conexões de afeto e oferecendo uma nova oportunidade para gatos que antes não tinham um lar. Cada adoção é uma vitória e um reforço de que, juntos, podemos fazer a diferença.
                     </p>
@@ -129,7 +131,7 @@
         <section>
             <div class="container">
                 <h2 class="title">Por que adotar?</h2>
-                <div class="flex-wrap">
+                <div class="flex-stretch">
                     <img src="./src/assets/why-adote_01.jpg" alt="Você está salvando uma vida! Os gatos que estão em abrigos de animais e programas de resgate encontram-se nessa situação devido a algum contratempo em suas vidas, necessitando de um novo lar.">
                     <img src="./src/assets/why-adote_02.jpg" alt="Eles vão estar te ajudando sempre! Eles podem ajudar a aliviar a depressão, a solidão e diminuir o risco de ataques cardíacos e derrames.">
                 </div>
@@ -138,23 +140,15 @@
         <section>
             <div class="container">
                 <h2 class="title">Esperando por um Lar</h2>
-            </div>
-            <div class="grid">
-                <div class="grid-2/3">
-                    <div class="grid-fotos">
-                        <div>
+                <div class="choose-friend">
+                    <div class="choose-friend__principal">
+                        <div class="choose-friend__fotos">
                             <img id="myImage" src="./src/assets/timao-photo_01.jpg" alt="" class="foto-gato">
-                        </div>
-                        <div>
                             <img id="otherPhotos" src="./src/assets/timao-photo_02.jpg" alt="">
                         </div>
-                    </div>
-                    <div class="grid-dsc-fotos">
-                        <div class="grid-dsc-fotos_header">
-                            <div class="grid-dsc-fotos_header-title">
-                                <span>Escolha seu amigo</span>
-                                <h2 class="title">Timão</h2>
-                            </div>
+                        <div class="grid-dsc-fotos">
+                            <span>Escolha seu amigo</span>
+                            <h2 class="title">Timão</h2>
                             <div class="grid-dsc-fotos_header-tags">
                                 <i class="fi fi-sr-wishlist-star"></i>
                                 <i class="fi fi-rr-mars"></i>
@@ -173,25 +167,28 @@
                             
                         </div>
                     </div>
-                </div>
-                <div class="grid-1/3">
-                    <i class="fi fi-bs-angle-small-up"></i>
-                    <div class="block-images">
-                        <img src="./src/assets/Rectangle 75.jpg" alt="Theo">
-                        <h3 class="name-cats">Theo</h3>
-                        <i class="fi fi-rr-mars"></i>
+                    <div class="choose-friend__lateral">
+                        <div class="chevrons">
+                            <i class="fi fi-bs-angle-small-up"></i>
+                            <i class="fi fi-bs-angle-small-down"></i>
+                        </div>
+                        <div class="block-images">
+                            <img src="./src/assets/Rectangle 75.jpg" alt="Theo">
+                            <h3 class="name-cats">Theo</h3>
+                            <i class="fi fi-rr-mars"></i>
+                        </div>
+                        <div class="block-images">
+                            <img src="./src/assets/Rectangle 75(1).jpg" alt="Paçoca">
+                            <h3 class="name-cats">Paçoca</h3>
+                            <i class="fi fi-rr-mars"></i>
+                        </div>
+                        <div class="block-images">
+                            <img src="./src/assets/Rectangle 75(2).jpg" alt="Michael">
+                            <h3 class="name-cats">Michael</h3>
+                            <i class="fi fi-rr-mars"></i>
+                        </div>
+                        
                     </div>
-                    <div class="block-images">
-                        <img src="./src/assets/Rectangle 75(1).jpg" alt="Paçoca">
-                        <h3 class="name-cats">Paçoca</h3>
-                        <i class="fi fi-rr-mars"></i>
-                    </div>
-                    <div class="block-images">
-                        <img src="./src/assets/Rectangle 75(2).jpg" alt="Michael">
-                        <h3 class="name-cats">Michael</h3>
-                        <i class="fi fi-rr-mars"></i>
-                    </div>
-                    <i class="fi fi-bs-angle-small-down"></i>
                 </div>
             </div>
         </section>
