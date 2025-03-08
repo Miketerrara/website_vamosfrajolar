@@ -1,0 +1,40 @@
+@use 'variable.scss' as c;
+
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
+    display:flex;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
+}
+@mixin title($h1:c.$ff-h1, $title:c.$green, $align:center , $margin:5rem 0 2rem) {
+    font:$h1;
+    color: $title;
+    text-align: $align;
+    margin:$margin;
+}
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
+    text-align: $align;
+    color:$color-txt;
+}
+
+footer{
+    width:100%;
+    background-color:c.$green;
+    padding:3.2rem 0;
+    .footer{
+        @include flex;
+        &__infos{
+            @include flex($justify:flex-start);
+            margin-top:2rem;
+        }
+        .fi{
+            @include txt($align:left, $color-txt: #fff);
+            margin-right: 2rem;
+        }
+        .txt-corpo{
+            @include txt($align:left, $color-txt: #fff);
+
+        }
+    }
+}

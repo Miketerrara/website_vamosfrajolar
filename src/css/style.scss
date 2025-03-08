@@ -4,6 +4,8 @@
 @use 'flexbox.scss';
 @use 'header.scss';
 @use 'grid.scss';
+@use 'cards.scss';
+@use 'footer.scss';
 
 @mixin btn($btn:c.$yellow) {
     background-color:$btn;

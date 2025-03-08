@@ -8,14 +8,51 @@
     bottom:0;
     left:0;
 }
-
-@mixin grid($qtdeColumn: 1fr 1fr, $gap:2rem){
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
+    display:flex;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
+}
+@mixin grid-container($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
     display:grid;
     grid-template-columns:$qtdeColumn;
     grid-gap:$gap;
+    padding:$padding;
+}
+@mixin grid($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
+    display:grid;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+    background-color:$bg;
+    padding:$padding;
+    border-radius:1rem;
+    box-sizing:border-box;
+}
+@mixin btn($btn:c.$yellow) {
+    background-color:$btn;
+    color:c.$bg;
+    width:15rem;
+    height:5.5rem;
+    font-size:1.8rem;    
+    margin-top:4rem;
+    border-radius:.8rem;
+    outline:none;
+    border:none;
+}
+@mixin title($h1:c.$ff-h1, $title:c.$green, $align:center , $margin:5rem 0 2rem) {
+    font:$h1;
+    color: $title;
+    text-align: $align;
+    margin:$margin;
+}
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
+    text-align: $align;
+    color:$color-txt;
 }
 .grid-container{
-    @include grid;
+    @include grid-container;
     img{
         width:100%;
         height:100%;
@@ -23,7 +60,7 @@
         border-radius:2rem;
     }
     &__inside{
-        @include grid;
+        @include grid-container;
         .grid-1{
             grid-column: span 2;
         }
@@ -47,16 +84,85 @@
     }
 }
 .choose-friend{
-    @include grid($qtdeColumn: 3fr 1fr);
+    @include grid-container($qtdeColumn: 3fr 1fr, $padding:1rem);
+
     &__principal{
         grid-column:1;
         @include grid($qtdeColumn: 1fr 2fr, $gap:2rem);        
+        
     }
+    .txt-corpo{
+        @include txt($align:left);
+    }            
     &__fotos{
         @include grid($qtdeColumn: 1fr 1fr 1fr, $gap:1rem);
         #myImage{
             grid-column: span 3;
             width:100%;
+            height:100%;
+            object-fit:cover;
+            border-radius:1rem;
         }
+    }
+    &__lateral{
+        @include grid($qtdeColumn:1fr, $padding:3.2rem 1.6rem);
+        position:relative;
+        img{
+            width:100%;
+            height:16rem;
+            border-radius:1rem;
+            object-fit: cover;
+
+        }
+        .name-cats{
+            @include title($h1:900 3.2rem c.$sf, $title:c.$green, $margin:0);
+        }
+        .chevrons{
+            position:absolute;
+            height:100%;
+            width:100%;
+            .fi-bs-angle-small-up{
+                position:absolute;
+                top:0;
+                left:50%;
+                font-size:medium;
+                margin-top:1rem;
+            }
+            .fi-bs-angle-small-down{
+                position:absolute;
+                bottom:0;
+                left:50%;
+                font-size:medium;
+                margin-bottom:1rem;
+            }
+        }
+    }
+    .container-choose__dsc{
+        padding:2rem 2rem;
+        box-sizing:border-box;
+        .title{
+            @include title($h1:800 5.6rem c.$sf , $margin: 0)
+        }
+        .obs{
+            @include title($h1:c.$ff-st, $title:c.$green, $margin:0);
+        }
+        &--btn-adote{
+            @include btn;      
+            i{
+                margin:0 1rem;
+            }      
+        }
+        &--btn-apadrinhe{
+            @include btn($btn:c.$green);
+            i{
+                margin:0 1rem;
+            }      
+        }
+    }
+    .fi-sr-wishlist-star{
+        @include title($h1: 800 2.8rem c.$sf, $margin:0 2rem);
+    }
+    .fi-rr-mars{
+        @include title($h1: 800 2.8rem c.$sf, $title: c.$icon, $margin:1rem 0);
     }
 }

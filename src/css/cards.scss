@@ -1,0 +1,76 @@
+@use 'variable.scss' as c;
+
+@mixin title-grid($gridFont:900 4rem/4rem c.$sf, $gridColor: c.$bg) {
+    color:$gridColor;
+    font:$gridFont;
+    margin:2rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
+    display:flex;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
+}
+@mixin grid-container($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
+    display:grid;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+    padding:$padding;
+}
+@mixin grid($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
+    display:grid;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+    background-color:$bg;
+    padding:$padding;
+    border-radius:1rem;
+    box-sizing:border-box;
+}
+@mixin btn($btn:c.$yellow) {
+    background-color:$btn;
+    color:c.$bg;
+    width:15rem;
+    height:5.5rem;
+    font-size:1.8rem;    
+    margin-top:4rem;
+    border-radius:.8rem;
+    outline:none;
+    border:none;
+}
+@mixin title($h1:c.$ff-h1, $title:c.$green, $align:center , $margin:5rem 0 2rem) {
+    font:$h1;
+    color: $title;
+    text-align: $align;
+    margin:$margin;
+}
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
+    text-align: $align;
+    color:$color-txt;
+}
+@mixin card($padding:1.2rem, $w:23rem, $h:36rem, $border: 1px solid c.$green){
+    width:$w;
+    height:$h;
+    padding:$padding;
+    box-sizing:border-box;
+    border: $border;
+    border-radius:1rem;
+}
+.padrinhos{
+    @include flex($wrap:wrap, $justify:space-evenly);
+    &__card{
+        @include card;
+        img{
+            width:100%;
+            height:18rem;
+            object-fit: cover;
+            border-radius:1rem;
+        }        
+    }
+    &__title{
+        @include title($h1: 900 2rem/2rem c.$sf, $margin:1.6rem 0);
+    }
+}
