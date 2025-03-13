@@ -17,5 +17,5 @@
     @include flex($justify: center);
 }
 .flex-stretch{
-    @include flex($justify:space-evenly);
+    @include flex($justify:space-evenly, $wrap:wrap);
 }

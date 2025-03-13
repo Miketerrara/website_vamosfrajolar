@@ -84,6 +84,27 @@ table {
   color: #0b8558;
 }
 
+@media screen and (max-width: 768px) {
+  #hero .txt-corpo {
+    font: 600 1.4rem/2rem "Nunito", serif;
+    text-align: left;
+    color: #383d38;
+  }
+  #hero .hero__title {
+    left: 2rem;
+    width: 70%;
+    top: 60%;
+  }
+  #hero .hero img {
+    padding: 0 2rem;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  .text-bold {
+    font: 900 4.8rem/5.2rem "Coiny", serif;
+  }
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -109,17 +130,21 @@ table {
 .flex-stretch {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
   position: absolute;
   top: 7.2rem;
   left: 50%;
   transform: translate(-50%);
   width: 100%;
-  max-width: 1170px;
+  max-width: 1280px;
   padding: 0 2rem;
   box-sizing: border-box;
   background-color: #0b8558;
@@ -230,10 +255,6 @@ table {
 
 .box-link1 {
   padding: 0.8rem 3.2rem;
-}
-
-.w-100 {
-  width: 100%;
 }
 
 .grid-container {
@@ -373,6 +394,12 @@ table {
   text-align: center;
   margin: 0;
 }
+.choose-friend .container-choose__dsc .btns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 .choose-friend .container-choose__dsc--btn-adote {
   background-color: #F2B11C;
   color: #f5f7fa;
@@ -414,6 +441,64 @@ table {
   margin: 1rem 0;
 }
 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+  .grid-container__inside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 0;
+  }
+  .choose-friend {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .choose-friend__principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+  .choose-friend__fotos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+  .choose-friend .btns {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .choose-friend__lateral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    background-color: #fff;
+    padding: 2rem 1.6rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+  .container-choose__dsc {
+    padding: 0;
+  }
+}
 .padrinhos {
   display: flex;
   justify-content: space-evenly;
@@ -441,10 +526,28 @@ table {
   margin: 1.6rem 0;
 }
 
+.card {
+  width: 27rem;
+  height: 36rem;
+  padding: 3.2rem 2rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .padrinhos__card {
+    margin-top: 2rem;
+  }
+}
 footer {
   width: 100%;
   background-color: #0b8558;
   padding: 3.2rem 0;
+  box-sizing: border-box;
 }
 footer .footer {
   display: flex;
@@ -471,6 +574,12 @@ footer .footer .txt-corpo {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 3.2rem 2rem;
+  }
+}
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -482,6 +591,7 @@ body {
   width: 100%;
   margin: 0 auto;
   background: #ECF1F4;
+  overflow-x: hidden;
 }
 
 a {
@@ -502,6 +612,7 @@ section {
 #about .img-about {
   position: relative;
   padding: 2rem;
+  box-sizing: border-box;
   margin-right: 2rem;
 }
 #about .img-about img {
@@ -517,6 +628,7 @@ section {
   font: 400 1.6rem/2.4rem "Nunito", serif;
   text-align: left;
   color: #383d38;
+  margin-right: 4rem;
 }
 #about .underlay {
   position: absolute;
@@ -546,6 +658,33 @@ section {
   font: 400 1.6rem/2.4rem "Nunito", serif;
   text-align: center;
   color: #383d38;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font: 800 3.2rem/3.2rem "Coiny", serif;
+    color: #0b8558;
+    text-align: center;
+    margin: 5rem 0 2rem;
+  }
+  #about .container {
+    flex-wrap: wrap;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  #about .img-about {
+    margin-right: 0;
+  }
+  #about img {
+    width: 100%;
+  }
+  .flex-stretch {
+    padding: 0 2rem;
+  }
+  .flex-stretch img {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

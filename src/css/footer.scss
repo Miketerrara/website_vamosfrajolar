@@ -22,6 +22,7 @@ footer{
     width:100%;
     background-color:c.$green;
     padding:3.2rem 0;
+    box-sizing:border-box;
     .footer{
         @include flex;
         &__infos{
@@ -36,5 +37,12 @@ footer{
             @include txt($align:left, $color-txt: #fff);
 
         }
+    }
+}
+
+@media screen and (max-width:768px){
+    .footer{
+        flex-direction:column;
+        padding:3.2rem 2rem;
     }
 }

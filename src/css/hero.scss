@@ -10,8 +10,8 @@
     margin-top:2rem;
     font: c.$ff-txt;
 }
-@mixin txt($color-txt:c.$black, $align:center){
-    font:c.$ff-txt;
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
     text-align: $align;
     color:$color-txt;
 }
@@ -57,4 +57,27 @@
     font:c.$ff-hero;
     color: c.$green;
 
+}
+@media screen and (max-width:768px) {
+#hero{
+    .txt-corpo{
+        @include txt($align:left, $font: c.$ff-txtMobile)
+    }
+    .hero{
+        &__title{
+            left:2rem;
+            width:70%;
+            top:60%;
+        }
+        img{
+            padding:0 2rem;
+            box-sizing:border-box;
+            margin-right:0 !important;
+            width:100%;
+        }
+    }
+}
+.text-bold{
+    font:c.$ff-heroMobile;
+}
 }

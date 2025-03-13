@@ -1,12 +1,18 @@
 @use 'variable.scss' as c;
-
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
+    display:flex;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
+}
 .menu{
+    @include flex;
     position:absolute;
     top:7.2rem;
     left:50%;
     transform:translate(-50%);
     width:100%;
-    max-width:1170px;
+    max-width:1280px;
     padding: 0 2rem;
     box-sizing:border-box;
     background-color: c.$green;
@@ -115,8 +121,3 @@
 .box-link1{
     padding:.8rem 3.2rem;
 }
-
-.w-100{
-    width: 100%;
-}
-

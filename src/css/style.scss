@@ -13,14 +13,14 @@
     padding:.8rem .8rem;
 }
 
-@mixin title($title:c.$green, $align:center) {
-    font:c.$ff-h1;
+@mixin title($title:c.$green, $align:center, $font:c.$ff-h1) {
+    font:$font;
     color: $title;
     text-align: $align;
     margin:5rem 0 2rem;
 }
-@mixin txt($color-txt:c.$black, $align:center){
-    font:c.$ff-txt;
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
     text-align: $align;
     color:$color-txt;
 }
@@ -34,6 +34,7 @@ body{
     width:100%;
     margin:0 auto;
     background: c.$body;
+    overflow-x:hidden;
 }
 a{
     color:c.$bg;
@@ -52,6 +53,7 @@ section{
     .img-about{
         position:relative;
         padding:2rem;
+        box-sizing:border-box;
         margin-right:2rem;
         img{
             z-index:1;
@@ -62,6 +64,7 @@ section{
     }
     .txt-corpo{
         @include txt($align:left);
+        margin-right:4rem;
     }
     .underlay{            
         position:absolute;
@@ -84,6 +87,33 @@ section{
 }
 .txt-corpo{
     @include txt;
+}
+@media screen and (max-width:768px){
+    .title{
+        @include title($font:c.$ff-h1Mobile, $align:center);
+    }
+
+    #about{
+        .container{
+            flex-wrap:wrap;
+            padding:2rem;
+            box-sizing:border-box;
+        }
+        .img-about{
+            margin-right:0;
+        }
+        img{
+            width:100%;
+        }
+    }
+    .flex-stretch{
+        padding:0 2rem;
+
+        img{
+            width:100%;
+            margin-top:2rem;
+        }
+    }
 }
 
 
