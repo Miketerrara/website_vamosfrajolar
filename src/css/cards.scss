@@ -51,13 +51,13 @@
     text-align: $align;
     color:$color-txt;
 }
-@mixin card($padding:1.2rem, $w:23rem, $h:36rem, $border: 1px solid c.$green){
+@mixin card($padding:1.2rem, $w:23rem, $h:36rem, $border: 1px solid c.$green, $border-r:1rem){
     width:$w;
     height:$h;
     padding:$padding;
     box-sizing:border-box;
     border: $border;
-    border-radius:1rem;
+    border-radius:$border-r;
 }
 .padrinhos{
     @include flex($wrap:wrap, $justify:space-evenly);
@@ -74,16 +74,62 @@
         @include title($h1: 900 2rem/2rem c.$sf, $margin:1.6rem 0);
     }
 }
+.about-card{
+    @include flex;
+    .txt-corpo{
+        @include txt($align:left);
+        flex:2 1 680px;
+    }
+}
 .card{
-    @include card($padding:3.2rem 2rem, $w:27rem, $border: none);
+    flex:1 1 27rem;
+    @include card($padding:3.2rem 2rem, $w:27rem, $border: none, $border-r:2rem);
     background-color:#fff;
     box-shadow:c.$shadow-box;
-    margin-left:2rem;
+    margin-left:4rem;
+}
+.card__title{
+    @include title($h1:900 12rem/12rem c.$sf, $margin: 0);
+}
+.card__txt{
+    @include txt($font: 400 2.8rem/3.6rem c.$ff);
+    margin:0 2rem;
+}
+.find-friends{
+    padding:4rem 2rem;
+    box-sizing:border-box;
+    width:100%;
+    background-color:#fff;
+    border-radius:2rem;
+    .title{
+        @include title($margin: 0 0 1.6rem);
+    }
+    strong{
+        @include txt($font:c.$ff-st, $color-txt: c.$green);
+    }
+}
+.item-gatos{
+    @include card;
+    margin:2rem 0;
 }
 @media screen and (max-width:768px){
     .padrinhos{
         &__card{
             margin-top:2rem;
+        }
+    }
+    .about-card{
+        @include flex($wrap:wrap, $justify: center);
+        flex-direction:column;
+        padding:0 2rem;
+        box-sizing:border-box;
+        .txt-corpo{
+            @include txt($align:center);
+            flex:1 1 100%;
+            margin-bottom:2rem;
+        }
+        .card__txt{
+            @include txt($font:400 2.4rem/2.8rem c.$ff);
         }
     }
 }

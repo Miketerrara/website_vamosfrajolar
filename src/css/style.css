@@ -38,7 +38,7 @@ table {
   height: 76rem;
 }
 #hero .txt-corpo {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: left;
   color: #383d38;
 }
@@ -70,7 +70,7 @@ table {
   border: none;
   border-radius: 0.4rem;
   margin-top: 2rem;
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   width: 22rem;
 }
 #hero .hero button .fi {
@@ -128,6 +128,13 @@ table {
 }
 
 .flex-stretch {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-wrap {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -317,7 +324,7 @@ table {
   box-sizing: border-box;
 }
 .choose-friend .txt-corpo {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: left;
   color: #383d38;
 }
@@ -405,11 +412,12 @@ table {
   color: #f5f7fa;
   width: 15rem;
   height: 5.5rem;
-  font-size: 1.8rem;
+  font: 400 1.8rem/1.8rem "Nunito", serif;
   margin-top: 4rem;
   border-radius: 0.8rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .choose-friend .container-choose__dsc--btn-adote i {
   margin: 0 1rem;
@@ -419,11 +427,12 @@ table {
   color: #f5f7fa;
   width: 15rem;
   height: 5.5rem;
-  font-size: 1.8rem;
+  font: 400 1.8rem/1.8rem "Nunito", serif;
   margin-top: 4rem;
   border-radius: 0.8rem;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 .choose-friend .container-choose__dsc--btn-apadrinhe i {
   margin: 0 1rem;
@@ -439,6 +448,97 @@ table {
   color: #37ABD0;
   text-align: center;
   margin: 1rem 0;
+}
+
+.program-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0;
+  padding: 0;
+  column-gap: 2rem;
+}
+.program-container__tabs {
+  grid-column: span 3;
+  background-color: #fff;
+  color: #0b8558;
+  width: 100%;
+  height: auto;
+  font: 900 2rem/2.6rem "Coiny", serif;
+  margin-top: 0;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 2rem 0;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-decoration: underline;
+}
+.program-container__tabs--hide {
+  grid-column: span 3;
+  background-color: none;
+  color: #696969;
+  width: 100%;
+  height: auto;
+  font: 300 2rem/2.6rem "Coiny", serif;
+  margin-top: 0;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.program-container__contents {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2rem;
+  background-color: #fff;
+  padding: 2rem 2.8rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.program-container__contents-info {
+  grid-column: span 8;
+}
+.program-container__contents-info .title {
+  font: 900 4rem/4rem "Coiny", serif;
+  color: #0b8558;
+  text-align: left;
+  margin: 5.6rem 0 1rem;
+}
+.program-container__contents-info .title__sub {
+  font: 400 1.6rem/1.6rem "Nunito", serif;
+  text-align: left;
+  color: #383d38;
+  letter-spacing: 1px;
+}
+.program-container__contents-info .txt-corpo {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: left;
+  color: #383d38;
+  margin-top: 4rem;
+}
+.program-container__contents-photo {
+  grid-column: 9/-1;
+}
+.program-container__contents-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.program-container li {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: left;
+  color: #383d38;
+  list-style-type: disc;
+  margin: 0.4rem 2.8rem 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -498,6 +598,70 @@ table {
   .container-choose__dsc {
     padding: 0;
   }
+  .program-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
+    column-gap: 2rem;
+    row-gap: 0;
+  }
+  .program-container__tabs {
+    background-color: #fff;
+    color: #0b8558;
+    width: 100%;
+    height: auto;
+    font: 900 1.4rem "Coiny", serif;
+    margin-top: 0;
+    border-radius: 0.8rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    grid-column: auto;
+    border-top-left-radius: 1.6rem;
+    border-top-right-radius: 1.6rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .program-container__tabs--hide {
+    grid-column: auto;
+    background-color: none;
+    color: #696969;
+    width: 100%;
+    height: auto;
+    font: 300 1.4rem "Coiny", serif;
+    margin-top: 0;
+    border-radius: 0.8rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .program-container__contents {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    background-color: #fff;
+    padding: 2rem 2.8rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .program-container__contents-info {
+    grid-column: 1/-1;
+  }
+  .program-container__contents-photo {
+    grid-column: 1/-1;
+  }
+  .program-container__contents-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
 }
 .padrinhos {
   display: flex;
@@ -526,21 +690,99 @@ table {
   margin: 1.6rem 0;
 }
 
+.about-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.about-card .txt-corpo {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: left;
+  color: #383d38;
+  flex: 2 1 680px;
+}
+
 .card {
+  flex: 1 1 27rem;
   width: 27rem;
   height: 36rem;
   padding: 3.2rem 2rem;
   box-sizing: border-box;
   border: none;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-color: #fff;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  margin-left: 2rem;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 4rem;
+}
+
+.card__title {
+  font: 900 12rem/12rem "Coiny", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 0;
+}
+
+.card__txt {
+  font: 400 2.8rem/3.6rem "Nunito", serif;
+  text-align: center;
+  color: #383d38;
+  margin: 0 2rem;
+}
+
+.find-friends {
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+.find-friends .title {
+  font: 800 4rem "Coiny", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 0 0 1.6rem;
+}
+.find-friends strong {
+  font: 900 2rem "Nunito", serif;
+  text-align: center;
+  color: #0b8558;
+}
+
+.item-gatos {
+  width: 23rem;
+  height: 36rem;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  border: 1px solid #0b8558;
+  border-radius: 1rem;
+  margin: 2rem 0;
 }
 
 @media screen and (max-width: 768px) {
   .padrinhos__card {
     margin-top: 2rem;
+  }
+  .about-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  .about-card .txt-corpo {
+    font: 400 1.8rem/2.8rem "Nunito", serif;
+    text-align: center;
+    color: #383d38;
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+  .about-card .card__txt {
+    font: 400 2.4rem/2.8rem "Nunito", serif;
+    text-align: center;
+    color: #383d38;
   }
 }
 footer {
@@ -563,13 +805,13 @@ footer .footer__infos {
   margin-top: 2rem;
 }
 footer .footer .fi {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: left;
   color: #fff;
   margin-right: 2rem;
 }
 footer .footer .txt-corpo {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: left;
   color: #fff;
 }
@@ -625,7 +867,7 @@ section {
   margin: 5rem 0 2rem;
 }
 #about .txt-corpo {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: left;
   color: #383d38;
   margin-right: 4rem;
@@ -655,8 +897,17 @@ section {
 }
 
 .txt-corpo {
-  font: 400 1.6rem/2.4rem "Nunito", serif;
+  font: 400 1.8rem/2.8rem "Nunito", serif;
   text-align: center;
+  color: #383d38;
+}
+
+.locate {
+  margin-bottom: 6.4rem;
+}
+.locate .txt-corpo {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: left;
   color: #383d38;
 }
 
@@ -684,6 +935,10 @@ section {
   .flex-stretch img {
     width: 100%;
     margin-top: 2rem;
+  }
+  .locate {
+    padding: 0 2rem;
+    box-sizing: border-box;
   }
 }
 

@@ -27,21 +27,21 @@
         <a href="../../index.html" class="logo"><img src="../assets/Vamos-Frajolar_LOGO 2.png" alt="Mascote frajola, com cocar de índio na cabeça"></a>
         <nav class="flex">
             <ul class="hidden-flex--reverse flex">
-                <a href="./src/html/about.html">
+                <a href="./about.html">
                     <li>Sobre nós</li>
                 </a>
-                <a href="./src/html/adote.html">
+                <a href="./adote.html">
                     <li>Quero Adotar</li>
                 </a>
-                <a href="./src/html/how.html">
+                <a href="./how.html">
                     <li>Como ajudar </li>
                 </a>
             </ul>
             <ul class="hidden-flex--reverse flex">
-                <a class="box-link1" href="./src/html/how-adote.html">
+                <a class="box-link1" href="./how-adote.html">
                     <li><i class="fi fi-rr-playing-cards"></i>Apadrinhar</li>
                 </a>
-                <a class="box-link2" href="./src/html/contact.html">
+                <a class="box-link2" href="./contact.html">
                     <li>Contato</li>
                 </a>
             </ul>
@@ -76,7 +76,7 @@
         </div>
     </div>
     <main>                
-        <section id="about" style="padding-top:28rem">
+        <section id="about" style="padding-top:24rem">
             <div class="container">
                 <div class="img-about">
                     <img src="../assets/frajola-mingato-large.jpg" alt="frajola mingato">
@@ -92,9 +92,9 @@
         </section>
         <section>
             <div class="container">
-                <div class="flex">
+                <div class="about-card">
                     <p class="txt-corpo">
-                        Em junho de 2021, nasceu a ONG Vamos Frajolar, com o objetivo não apenas de resgatar, mas de compreender as raízes dos maus-tratos e do abandono em diversos bairros.<br>                    
+                        Em junho de 2021, nasceu a ONG Vamos Frajolar, com o objetivo não apenas de resgatar, mas de compreender as raízes dos maus-tratos e do abandono em diversos bairros.<br><br>             
                         Enfrentamos grandes desafios e direcionamos 100% de nossas ações e recursos para essa missão. Ao longo dessa jornada, aprendemos muito com um trabalho intenso e próximo aos animais, além de conhecermos pessoas maravilhosas que nos apoiaram, fortalecendo nossos laços com a cultura e liderança local.
                     </p>
                     <div class="card">
@@ -108,46 +108,48 @@
         </section>
         <section>
             <div class="container">
-                <div class="tabs">
-                    <button type="button">Jojolândia</button>
-                    <button type="button">Programa CED</button>
-                    <button type="button">Programa de Apadrinhamento</button>
-                    <button type="button">Resgate e cuidados</button>
-                </div>
-                <div class="contents">
-                    <div class="content-infos">
-                        <h2 class="title">Escolha seu amigo</h2>
-                        <span class="title__sub">Timão</span>
-                        <p class="txt-corpo">
-                            O CED é uma abordagem ética e eficaz para controlar a população de animais de rua, garantindo sua saúde e qualidade de vida.
-                            <br>
-                            Como funciona:
-                        </p>
-                        <ul>
-                            <li>Captura: Identificamos e capturamos os animais de maneira segura.</li>
-                            <li>Esterilização: Realizamos a castração em clínicas veterinárias parceiras.</li>
-                            <li>Devolução: Após a recuperação, devolvemos os animais ao seu habitat natural, onde podem viver sem contribuir para o aumento da população de rua.</li>
-                        </ul>
-                        <p class="txt-corpo">
-                            Por quê é importante?
-                        </p>
-                        <ul>
-                            <li>Ajuda a reduzir o número de animais abandonados.</li>
-                            <li>Melhora a saúde e qualidade de vida dos animais de rua.</li>
-                            <li>Previne conflitos entre animais e comunidades.</li>
-                        </ul>                            
-                    </div>
-                    <div class="content-image">
-                        <img src="../assets/cute-white-brown-domestic-cat-standing-near-stone-wall-by-wired-fence 1.jpg" alt="Programa CED - imagem gato">
+                <div class="program-container">
+                    <button class="program-container__tabs--hide" type="button">Jojolândia</button>
+                    <button class="program-container__tabs" type="button">Programa CED</button>
+                    <button class="program-container__tabs--hide" type="button">Programa de Apadrinhamento</button>
+                    <button class="program-container__tabs--hide" type="button">Resgate e cuidados</button>
+                    <div class="program-container__contents">
+                        <div class="program-container__contents-info">
+                            <h2 class="title">Programa CED</h2>
+                            <span class="title__sub">(Captura, Esterilização e Devolução)</span>
+                            <p class="txt-corpo">
+                                O CED é uma abordagem ética e eficaz para controlar a população de animais de rua, garantindo sua saúde e qualidade de vida.
+                                <br>
+                                Como funciona:
+                            </p>
+                            <ul>
+                                <li>Captura: Identificamos e capturamos os animais de maneira segura.</li>
+                                <li>Esterilização: Realizamos a castração em clínicas veterinárias parceiras.</li>
+                                <li>Devolução: Após a recuperação, devolvemos os animais ao seu habitat natural, onde podem viver sem contribuir para o aumento da população de rua.</li>
+                            </ul>
+                            <p class="txt-corpo">
+                                Por quê é importante?
+                            </p>
+                            <ul>
+                                <li>Ajuda a reduzir o número de animais abandonados.</li>
+                                <li>Melhora a saúde e qualidade de vida dos animais de rua.</li>
+                                <li>Previne conflitos entre animais e comunidades.</li>
+                            </ul>                            
+                        </div>
+                        <div class="program-container__contents-photo">
+                            <img src="../assets/cute-white-brown-domestic-cat-standing-near-stone-wall-by-wired-fence 1.jpg" alt="Programa CED - imagem gato">
+                        </div>
                     </div>
                 </div>
             </div>            
         </section>
         <section>
             <div class="container">
-                <h2 class="title">Como nos encontrar</h2>
-                <h3 class="title__complemento">PSertão do Camburi - São Sebastião - SP</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56735.17151650642!2d-45.49192155377402!3d-23.823852161490052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d27f94c6dd56fd%3A0x546010e330dcb8e7!2zU8OjbyBTZWJhc3Rpw6NvLCBTUA!5e0!3m2!1spt-BR!2sbr!4v1740010095800!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="locate">
+                    <h2 class="title">Como nos encontrar</h2>
+                    <h3 class="txt-corpo">Sertão do Camburi - São Sebastião - SP</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56735.17151650642!2d-45.49192155377402!3d-23.823852161490052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d27f94c6dd56fd%3A0x546010e330dcb8e7!2zU8OjbyBTZWJhc3Rpw6NvLCBTUA!5e0!3m2!1spt-BR!2sbr!4v1740010095800!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+                </div>
             </div>
         </section>
     </main>
@@ -176,5 +178,5 @@
             </div>
         </div>
     </footer>
-    </body>
-    </html>
+</body>
+</html>

@@ -19,3 +19,6 @@
 .flex-stretch{
     @include flex($justify:space-evenly, $wrap:wrap);
 }
+.flex-wrap{
+    @include flex($justify:space-evenly, $wrap:wrap);
+}
