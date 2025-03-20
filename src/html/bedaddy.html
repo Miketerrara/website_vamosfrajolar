@@ -32,25 +32,25 @@
         <a href="../../index.html" class="logo"><img src="../assets/Vamos-Frajolar_LOGO 2.png" alt="Mascote frajola, com cocar de índio na cabeça"></a>
         <nav class="flex">
             <ul class="hidden-flex--reverse flex">
-                <a href="./src/html/about.html">
+                <a href="./about.html">
                     <li>Sobre nós</li>
                 </a>
-                <a href="./src/html/adote.html">
+                <a href="./adote.html">
                     <li>Quero Adotar</li>
                 </a>
-                <a href="./src/html/how.html">
+                <a href="./how.html">
                     <li>Como ajudar </li>
                 </a>
             </ul>
             <ul class="hidden-flex--reverse flex">
-                <a class="box-link1" href="./src/html/how-adote.html">
+                <a class="box-link1" href="./how-adote.html">
                     <li><i class="fi fi-rr-playing-cards"></i>Apadrinhar</li>
                 </a>
-                <a class="box-link2" href="./src/html/contact.html">
+                <a class="box-link2" href="./contact.html">
                     <li>Contato</li>
                 </a>
             </ul>
-            <button type="button" class="hidden">
+            <button type="button" class="hidden" id="navbar">
                 <div class="bar ">
                     <div class="bar-01"></div>
                     <div class="bar-02"></div>
@@ -60,25 +60,24 @@
         </nav>          
     </header>
     <div class="bar-modal">
-        <div class="bar-modal__nav">
-            <ul class="hidden flex-column">
-                <a href="./src/html/about.html">
-                    <li>Sobre nós</li>
-                </a>
-                <a href="./src/html/adote.html">
-                    <li>Quero Adotar</li>
-                </a>
-                <a href="./src/html/how.html">
-                    <li>Como ajudar </li>
-                </a>
-                <a href="./src/html/how-adote.html">
-                    <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
-                </a>
-                <a href="./src/html/contact.html">
-                    <li>Contato</li>
-                </a>
-            </ul>
-        </div>
+        <i class="fi fi-br-x" id="dismiss-navbar"></i>
+        <ul class="flex-column bar-modal__nav">
+            <a href="./about.html">
+                <li>Sobre nós</li>
+            </a>
+            <a href="./adote.html">
+                <li>Quero Adotar</li>
+            </a>
+            <a href="./how.html">
+                <li>Como ajudar </li>
+            </a>
+            <a href="./how-adote.html">
+                <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
+            </a>
+            <a href="./contact.html">
+                <li>Contato</li>
+            </a>
+        </ul>
     </div>
     <main>
         <section>
@@ -284,4 +283,5 @@
     </div>
 </footer>
 </body>
+<script src="../js/script.js"></script>
 </html>

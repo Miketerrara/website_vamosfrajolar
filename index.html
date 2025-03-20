@@ -45,7 +45,7 @@
                     <li>Contato</li>
                 </a>
             </ul>
-            <button type="button" class="hidden">
+            <button type="button" class="hidden navbar" id="navbar">
                 <div class="bar ">
                     <div class="bar-01"></div>
                     <div class="bar-02"></div>
@@ -55,25 +55,24 @@
         </nav>          
     </header>
     <div class="bar-modal">
-        <div class="bar-modal__nav">
-            <ul class="hidden flex-column">
-                <a href="./src/html/about.html">
-                    <li>Sobre nós</li>
-                </a>
-                <a href="./src/html/adote.html">
-                    <li>Quero Adotar</li>
-                </a>
-                <a href="./src/html/how.html">
-                    <li>Como ajudar </li>
-                </a>
-                <a href="./src/html/how-adote.html">
-                    <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
-                </a>
-                <a href="./src/html/contact.html">
-                    <li>Contato</li>
-                </a>
-            </ul>
-        </div>
+        <i class="fi fi-br-x" id="dismiss-navbar"></i>
+        <ul class="flex-column bar-modal__nav">
+            <a href="./src/html/about.html">
+                <li>Sobre nós</li>
+            </a>
+            <a href="./src/html/adote.html">
+                <li>Quero Adotar</li>
+            </a>
+            <a href="./src/html/how.html">
+                <li>Como ajudar </li>
+            </a>
+            <a href="./src/html/how-adote.html">
+                <li><i class="fi fi-rr-playing-cards"></i>Como apadrinhar</li>
+            </a>
+            <a href="./src/html/contact.html">
+                <li>Contato</li>
+            </a>
+        </ul>
     </div>
     <main>
         <section id="hero">
@@ -81,7 +80,12 @@
                 <div class="hero__title">
                     <h1 class="text-bold">Encontre o seu novo melhor amigo</h1>
                     <p class="txt-corpo">Dê um lar, ganhe um amigo fiel para toda a vida</p>
-                    <a href="./src/html/adote.html"><button type="button"><i class="fi fi-rr-paw"></i>Procurar um amigo!</button></a>
+                    <a href="./src/html/adote.html">
+                        <button type="button">
+                            <i class="fi fi-rr-paw"></i>
+                            Procurar um amigo!
+                        </button>
+                    </a>
                 </div>
                 <img src="./src/assets/Bn_Gato01.png" alt="Gato zoiudo">
             </div>
@@ -268,4 +272,5 @@
         </div>
     </footer>
 </body>
+<script src="./src/js/script.js"></script>
 </html>

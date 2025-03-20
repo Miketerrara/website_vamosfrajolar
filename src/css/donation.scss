@@ -1,0 +1,140 @@
+@use 'variable.scss' as c;
+
+@mixin title-grid($gridFont:900 4rem/4rem c.$sf, $gridColor: c.$bg) {
+    color:$gridColor;
+    font:$gridFont;
+    margin:2rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+@mixin flex($justify:space-between, $wrap:nowrap, $itemAlign:center){
+    display:flex;
+    justify-content:$justify;
+    flex-wrap:$wrap;
+    align-items:$itemAlign;
+}
+@mixin grid-container($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
+    display:grid;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+    padding:$padding;
+}
+@mixin grid($qtdeColumn: 1fr 1fr, $gap:2rem, $bg:#fff, $padding:2rem){
+    display:grid;
+    grid-template-columns:$qtdeColumn;
+    grid-gap:$gap;
+    background-color:$bg;
+    padding:$padding;
+    border-radius:1rem;
+    box-sizing:border-box;
+}
+@mixin btn($btn:c.$yellow, $padding:.8rem 2rem, $color: c.$bg, $w:15rem, $h:5.5rem, $m-top:4rem, $border:none,) {
+    background-color:$btn;
+    color:$color;
+    width:$w;
+    height:$h;
+    font-size:1.8rem;   
+    text-align:center; 
+    margin-top:$m-top;
+    border-radius:.8rem;
+    padding:$padding;
+    outline:none;
+    box-sizing:border-box;
+    border:$border;
+}
+@mixin title($h1:c.$ff-h1, $title:c.$green, $align:center , $margin:5rem 0 2rem) {
+    font:$h1;
+    color: $title;
+    text-align: $align;
+    margin:$margin;
+}
+@mixin txt($color-txt:c.$black, $align:center, $font:c.$ff-txt){
+    font:$font;
+    text-align: $align;
+    color:$color-txt;
+}
+@mixin card($padding:1.2rem, $w:23rem, $h:36rem, $border: 1px solid c.$green, $border-r:1rem){
+    width:$w;
+    height:$h;
+    padding:$padding;
+    box-sizing:border-box;
+    border: $border;
+    border-radius:$border-r;
+}
+
+.container__pix{
+    width:80%;
+    margin:2rem auto;
+    padding:2rem 4rem;
+    background-color: c.$bg;
+    border-radius:2rem;
+    @include flex;
+    &-info{
+        width:70%;
+    }
+    &-qr{
+        width:25%;
+        img{
+            width:100%;
+            margin: 1.2rem auto;
+        }
+    }
+    .title-02{
+        @include title($h1:800 2rem c.$sf, $margin:2rem 0)
+    }
+    .pix-key{
+        margin: 0 auto;
+        font-weight:600;
+        @include btn($btn:transparent, $m-top:-2rem, $color:c.$black, $w:100%);
+    }
+}
+.box-card{
+    @include card($border:none, $h:auto, $w:28rem, $padding:0);
+    overflow:hidden;
+    background-color:#fff;
+    box-sizing:border-box;
+    margin:3.2rem auto;
+    &__head{
+        width:100%;
+        background-color:c.$green;
+        padding:1.6rem;
+        box-sizing:border-box;
+    }
+    &__title{
+        @include txt($color-txt:#fff);
+        font-weight:800;
+    }
+    &__txt{
+        @include txt;
+        line-height:1.4em;
+        margin:2rem;
+    }
+    img{
+        width:100%;
+        margin:2.8rem auto;
+        padding:0 2rem;
+        box-sizing: border-box;
+    }
+    .btn-ajudar{
+        @include btn($w:24rem, $m-top:2rem);
+        margin: 2rem auto;
+        display:block;
+    }
+}
+@media screen and (max-width:768px) {
+    .container__pix{
+        @include flex($wrap:wrap);
+        &-info{
+            width:100%;
+        }
+        &-qr{
+            width:100%;
+            margin:2rem 4rem;
+            img{
+                width:100%;
+                margin: 1.2rem auto;
+            }
+        }
+    }
+}

@@ -43,7 +43,7 @@
         }
         button{
             @include btn;
-            width:22rem;
+            width:30rem;
             .fi{
                 margin:0 .8rem;
                 font-size:1.8rem;
@@ -59,25 +59,29 @@
 
 }
 @media screen and (max-width:768px) {
-#hero{
-    .txt-corpo{
-        @include txt($align:left, $font: c.$ff-txtMobile)
-    }
-    .hero{
-        &__title{
-            left:2rem;
-            width:70%;
-            top:60%;
+    #hero{
+        .txt-corpo{
+            @include txt($align:left, $font: c.$ff-txtMobile)
         }
-        img{
-            padding:0 2rem;
-            box-sizing:border-box;
-            margin-right:0 !important;
-            width:100%;
+        .hero{
+            &__title{
+                left:2rem;
+                width:76%;
+                margin-bottom:1.2rem;
+                top:60%;
+                .txt-corpo{
+                    margin-top:2rem;
+                }
+            }
+            img{
+                padding:0 2rem;
+                box-sizing:border-box;
+                margin-right:0 !important;
+                width:100%;
+            }
         }
     }
-}
-.text-bold{
-    font:c.$ff-heroMobile;
-}
+    .text-bold{
+        font:c.$ff-heroMobile;
+    }
 }

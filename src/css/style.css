@@ -71,7 +71,7 @@ table {
   border-radius: 0.4rem;
   margin-top: 2rem;
   font: 400 1.8rem/2.8rem "Nunito", serif;
-  width: 22rem;
+  width: 30rem;
 }
 #hero .hero button .fi {
   margin: 0 0.8rem;
@@ -92,8 +92,12 @@ table {
   }
   #hero .hero__title {
     left: 2rem;
-    width: 70%;
+    width: 76%;
+    margin-bottom: 1.2rem;
     top: 60%;
+  }
+  #hero .hero__title .txt-corpo {
+    margin-top: 2rem;
   }
   #hero .hero img {
     padding: 0 2rem;
@@ -228,6 +232,13 @@ table {
   width: 100%;
   transition: All 0.4s ease-in-out;
 }
+.bar-modal .fi-br-x {
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
 .bar-modal--active {
   position: absolute;
   top: 0;
@@ -235,21 +246,19 @@ table {
   visibility: visible;
   background-color: #0b8558;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 99;
   opacity: 0.95;
 }
-.bar-modal--active__nav {
-  position: fixed;
+.bar-modal__nav {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  font: 400 2.4rem/2.5 "Coiny", serif;
 }
-.bar-modal--active__nav ul li:hover {
-  font-weight: 800;
-  letter-spacing: 0.8px;
+.bar-modal ul li {
+  margin-bottom: 4.8rem;
+  font-size: 2rem;
 }
 
 .box-link1, .box-link2 {
@@ -750,13 +759,45 @@ table {
 }
 
 .item-gatos {
-  width: 23rem;
-  height: 36rem;
-  padding: 1.2rem;
+  width: auto;
+  height: auto;
+  padding: 1.6rem 2rem;
   box-sizing: border-box;
-  border: 1px solid #0b8558;
+  border: none;
   border-radius: 1rem;
-  margin: 2rem 0;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+.item-gatos .item-gatos__infos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+.item-gatos .item-gatos__infos .title {
+  font: 900 3.2rem "Coiny", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 0;
+}
+.item-gatos .fi-sr-wishlist-star {
+  font: 800 2.8rem "Coiny", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 0 2rem;
+}
+.item-gatos .fi-br-female {
+  font: 900 2.8rem "Coiny", serif;
+  color: #DF2896;
+  text-align: center;
+  margin: 0;
+}
+.item-gatos .fi-br-male {
+  font: 900 2.8rem "Coiny", serif;
+  color: #37ABD0;
+  text-align: center;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -789,7 +830,6 @@ footer {
   width: 100%;
   background-color: #0b8558;
   padding: 3.2rem 0;
-  box-sizing: border-box;
 }
 footer .footer {
   display: flex;
@@ -820,6 +860,124 @@ footer .footer .txt-corpo {
   .footer {
     flex-direction: column;
     padding: 3.2rem 2rem;
+    box-sizing: border-box;
+  }
+}
+.container__pix {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem 4rem;
+  background-color: #f5f7fa;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.container__pix-info {
+  width: 70%;
+}
+.container__pix-qr {
+  width: 25%;
+}
+.container__pix-qr img {
+  width: 100%;
+  margin: 1.2rem auto;
+}
+.container__pix .title-02 {
+  font: 800 2rem "Coiny", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 2rem 0;
+}
+.container__pix .pix-key {
+  margin: 0 auto;
+  font-weight: 600;
+  background-color: transparent;
+  color: #383d38;
+  width: 100%;
+  height: 5.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: -2rem;
+  border-radius: 0.8rem;
+  padding: 0.8rem 2rem;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+.box-card {
+  width: 28rem;
+  height: auto;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 3.2rem auto;
+}
+.box-card__head {
+  width: 100%;
+  background-color: #0b8558;
+  padding: 1.6rem;
+  box-sizing: border-box;
+}
+.box-card__title {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+}
+.box-card__txt {
+  font: 400 1.8rem/2.8rem "Nunito", serif;
+  text-align: center;
+  color: #383d38;
+  line-height: 1.4em;
+  margin: 2rem;
+}
+.box-card img {
+  width: 100%;
+  margin: 2.8rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.box-card .btn-ajudar {
+  background-color: #F2B11C;
+  color: #f5f7fa;
+  width: 24rem;
+  height: 5.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+  padding: 0.8rem 2rem;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+  margin: 2rem auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .container__pix {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .container__pix-info {
+    width: 100%;
+  }
+  .container__pix-qr {
+    width: 100%;
+    margin: 2rem 4rem;
+  }
+  .container__pix-qr img {
+    width: 100%;
+    margin: 1.2rem auto;
   }
 }
 html {
@@ -887,6 +1045,8 @@ section {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .title {
