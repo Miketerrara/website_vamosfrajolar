@@ -944,7 +944,8 @@ footer .footer .txt-corpo {
   padding: 0 2rem;
   box-sizing: border-box;
 }
-.box-card .btn-ajudar {
+
+.btn-ajudar {
   background-color: #F2B11C;
   color: #f5f7fa;
   width: 24rem;
@@ -959,6 +960,34 @@ footer .footer .txt-corpo {
   border: none;
   margin: 2rem auto;
   display: block;
+  cursor: pointer;
+  transition: all 0.45s ease-in;
+}
+.btn-ajudar:hover {
+  background-color: #cf9817;
+}
+.btn-ajudar i {
+  margin-right: 1.6rem;
+}
+
+.list-columns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 5.2rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.list-columns ul {
+  list-style-position: inside;
+}
+.list-columns li {
+  margin: 2rem 0;
+  list-style: disc;
+  font: 700 1.4rem/1.8rem "Nunito", serif;
+  text-align: left;
+  color: #0b8558;
 }
 
 @media screen and (max-width: 768px) {
@@ -978,6 +1007,21 @@ footer .footer .txt-corpo {
   .container__pix-qr img {
     width: 100%;
     margin: 1.2rem auto;
+  }
+  .list-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .list-columns ul {
+    width: 100%;
+  }
+  .list-columns li {
+    font-size: 2rem;
+    text-align: center;
+    list-style: none;
   }
 }
 html {
