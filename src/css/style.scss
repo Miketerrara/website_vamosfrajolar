@@ -7,6 +7,7 @@
 @use 'cards.scss';
 @use 'footer.scss';
 @use 'donation.scss';
+@use 'form.scss';
 
 @mixin btn($btn:c.$yellow) {
     background-color:$btn;
@@ -90,6 +91,10 @@ section{
 }
 .txt-corpo{
     @include txt;
+    .obs{
+        @include txt($color-txt:c.$green, $font:700 2rem/2.4rem c.$ff);
+        margin-top:2rem;
+    }
 }
 .locate{
     margin-bottom:6.4rem;
@@ -97,6 +102,7 @@ section{
         @include txt($align:left);
     }
 }
+
 @media screen and (max-width:768px){
     .title{
         @include title($font:c.$ff-h1Mobile, $align:center);

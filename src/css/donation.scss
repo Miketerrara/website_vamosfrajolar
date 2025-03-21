@@ -145,6 +145,33 @@
     }
 
 }
+.box-fathers{
+    @include flex($justify: center, $wrap:wrap);
+    margin:3rem auto;
+    &__cards{
+        @include card($padding:0, $w:auto, $h:22rem, $border: none, $border-r:0);
+        margin:2rem;
+        overflow:hidden;
+        img{
+            width:100%;
+            height:auto;
+            object-fit: cover;
+            border-radius:1.6rem;
+        }
+    }
+    &__names{
+        @include txt($font: 300 1.4rem c.$ff);
+    }
+}
+.list-brands{
+    @include flex($justify: space-evenly, $wrap:wrap);
+    margin:2rem;
+    img{
+        margin:2.4rem;
+        width:20rem;
+        height:auto;
+    }
+}
 @media screen and (max-width:768px) {
     .container__pix{
         @include flex($wrap:wrap);
