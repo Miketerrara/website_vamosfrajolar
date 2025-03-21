@@ -81,8 +81,11 @@
     }
     .title-grid{
         @include title-grid;
-
+        
     }
+}
+.obs{
+    @include title($h1:c.$ff-st, $title:c.$green, $margin:0);
 }
 .choose-friend{
     @include grid-container($qtdeColumn: 3fr 1fr, $padding:1rem);
@@ -144,24 +147,9 @@
         .title{
             @include title($h1:800 5.6rem c.$sf , $margin: 0)
         }
-        .obs{
-            @include title($h1:c.$ff-st, $title:c.$green, $margin:0);
-        }
         .btns{
             @include flex;
-        }
-        &--btn-adote{
-            @include btn;      
-            i{
-                margin:0 1rem;
-            }      
-        }
-        &--btn-apadrinhe{
-            @include btn($btn:c.$green);
-            i{
-                margin:0 1rem;
-            }      
-        }
+        }        
     }
     .fi-sr-wishlist-star{
         @include title($h1: 800 2.8rem c.$sf, $margin:0 2rem);
@@ -169,6 +157,20 @@
     .fi-rr-mars{
         @include title($h1: 800 2.8rem c.$sf, $title: c.$icon, $margin:1rem 0);
     }
+}
+.container-choose__dsc--btn-apadrinhe{
+    @include btn($btn:c.$green, $w:24rem);
+
+    i{
+        margin:0 1rem;
+    }  
+}
+.container-choose__dsc--btn-adote{
+    @include btn($w:24rem);      
+    margin-right:2rem;
+    i{
+        margin:0 1rem;
+    }  
 }
 .program-container{
     @include grid-container($qtdeColumn: repeat(12, 1fr), $padding:0, $gap:0);

@@ -316,6 +316,13 @@ table {
   left: 0;
 }
 
+.obs {
+  font: 900 2rem "Nunito", serif;
+  color: #0b8558;
+  text-align: center;
+  margin: 0;
+}
+
 .choose-friend {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -404,47 +411,11 @@ table {
   text-align: center;
   margin: 0;
 }
-.choose-friend .container-choose__dsc .obs {
-  font: 900 2rem "Nunito", serif;
-  color: #0b8558;
-  text-align: center;
-  margin: 0;
-}
 .choose-friend .container-choose__dsc .btns {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-}
-.choose-friend .container-choose__dsc--btn-adote {
-  background-color: #F2B11C;
-  color: #f5f7fa;
-  width: 15rem;
-  height: 5.5rem;
-  font: 400 1.8rem/1.8rem "Nunito", serif;
-  margin-top: 4rem;
-  border-radius: 0.8rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-.choose-friend .container-choose__dsc--btn-adote i {
-  margin: 0 1rem;
-}
-.choose-friend .container-choose__dsc--btn-apadrinhe {
-  background-color: #0b8558;
-  color: #f5f7fa;
-  width: 15rem;
-  height: 5.5rem;
-  font: 400 1.8rem/1.8rem "Nunito", serif;
-  margin-top: 4rem;
-  border-radius: 0.8rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-.choose-friend .container-choose__dsc--btn-apadrinhe i {
-  margin: 0 1rem;
 }
 .choose-friend .fi-sr-wishlist-star {
   font: 800 2.8rem "Coiny", serif;
@@ -457,6 +428,39 @@ table {
   color: #37ABD0;
   text-align: center;
   margin: 1rem 0;
+}
+
+.container-choose__dsc--btn-apadrinhe {
+  background-color: #0b8558;
+  color: #f5f7fa;
+  width: 24rem;
+  height: 5.5rem;
+  font: 400 1.8rem/1.8rem "Nunito", serif;
+  margin-top: 4rem;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.container-choose__dsc--btn-apadrinhe i {
+  margin: 0 1rem;
+}
+
+.container-choose__dsc--btn-adote {
+  background-color: #F2B11C;
+  color: #f5f7fa;
+  width: 24rem;
+  height: 5.5rem;
+  font: 400 1.8rem/1.8rem "Nunito", serif;
+  margin-top: 4rem;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.container-choose__dsc--btn-adote i {
+  margin: 0 1rem;
 }
 
 .program-container {
@@ -759,26 +763,86 @@ table {
 }
 
 .item-gatos {
-  width: auto;
+  width: 26rem;
   height: auto;
-  padding: 1.6rem 2rem;
+  padding: 1.2rem;
   box-sizing: border-box;
   border: none;
   border-radius: 1rem;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
+  margin: 2rem 1.2rem;
+  background-color: #fff;
 }
-.item-gatos .item-gatos__infos {
+.item-gatos img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.item-gatos--clicked {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  margin-top: 1.2rem;
 }
-.item-gatos .item-gatos__infos .title {
-  font: 900 3.2rem "Coiny", serif;
+.item-gatos--clicked img {
+  width: 36rem;
+}
+.item-gatos--clicked__info {
+  display: none;
+  margin: 2rem 4rem;
+}
+.item-gatos--clicked__info .head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.item-gatos--clicked__info .title {
+  font: 800 4rem "Coiny", serif;
+  color: #0b8558;
+  text-align: left;
+  margin: 0;
+}
+.item-gatos--clicked__info .txt-corpo {
+  font: 400 1.4rem/1.8rem "Nunito", serif;
+  text-align: left;
+  color: #383d38;
+}
+.item-gatos--clicked .fi-sr-wishlist-star {
+  font: 800 2.8rem "Coiny", serif;
   color: #0b8558;
   text-align: center;
+  margin: 0 2rem;
+}
+.item-gatos--clicked .fi-br-female {
+  font: 900 2.8rem "Coiny", serif;
+  color: #DF2896;
+  text-align: center;
+  margin: 0;
+}
+.item-gatos--clicked .fi-br-male {
+  font: 900 2.8rem "Coiny", serif;
+  color: #37ABD0;
+  text-align: center;
+  margin: 0;
+}
+.item-gatos__infos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 1.6rem;
+  box-sizing: border-box;
+}
+.item-gatos__infos .title {
+  font: 900 3.2rem "Coiny", serif;
+  color: #0b8558;
+  text-align: left;
   margin: 0;
 }
 .item-gatos .fi-sr-wishlist-star {
@@ -788,13 +852,13 @@ table {
   margin: 0 2rem;
 }
 .item-gatos .fi-br-female {
-  font: 900 2.8rem "Coiny", serif;
+  font: 900 2.4rem "Coiny", serif;
   color: #DF2896;
   text-align: center;
   margin: 0;
 }
 .item-gatos .fi-br-male {
-  font: 900 2.8rem "Coiny", serif;
+  font: 900 2.4rem "Coiny", serif;
   color: #37ABD0;
   text-align: center;
   margin: 0;
